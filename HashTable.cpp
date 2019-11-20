@@ -1,4 +1,5 @@
 #include "HashTable.h"
+#include "Exceptions.h"
 
 ///////////////////// TODO: FILL OUT THE FUNCTIONS /////////////////////
 

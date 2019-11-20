@@ -1,4 +1,5 @@
 #include "ChainingHashTable.h"
+#include "Exceptions.h"
 
 ///////////////////// TODO: FILL OUT THE FUNCTIONS /////////////////////
 
@@ -52,13 +53,32 @@ void ChainingHashTable::resize() {
 
 // removes the given key from the hash table - if the key is not in the list, throw an error
 int ChainingHashTable::remove(std::string key) {
-	int index = hash(key);
+	vector<pair<string, int>>* curList = &hashTable[hash(key)];
+	bool removed = false;
+	for (int i = 0; i < curList->size(); i++) {
+		if (curList->at(i).first == key) {
+			curList->erase(curList->begin() + i);
+			if (curList->size() == 0) {
+				size--;
+			}
+			removed = true;
+			break;
+		}
+	}
+	if (!removed) {
+		throw ItemNotFoundException();
+	}
 	return 0;
 }
 
 // getter to obtain the value associated with the given key
 int ChainingHashTable::get(std::string key) {
-
+	vector<pair<string, int>>* curList = &hashTable[hash(key)];
+	for (int i = 0; i < curList->size(); i++) {
+		if (curList->at(i).first == key) {
+			return curList->at(i).second;
+		}
+	}
 	return 0;
 }
 
@@ -67,7 +87,7 @@ void ChainingHashTable::printAll(std::string filename) {
 
 }
 void ChainingHashTable::display() {
-	cout << "{";
+	cout << endl << "{";
 	for (int i = 0; i < capacity; i++) {
 		vector<pair<string, int>>* curList = &hashTable[i];
 		cout << "[";
@@ -76,5 +96,5 @@ void ChainingHashTable::display() {
 		}
 		cout << "], ";
 	}
-	cout << "}";
+	cout << "}" << endl;
 }
