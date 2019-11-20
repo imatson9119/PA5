@@ -17,10 +17,10 @@ void ChainingHashTable::insert(std::string key, int val) {
 	int index = hash(key);
 	bool newItem = true;
 	for (int i = 0; i < hashTable[index].size(); i++) {
-		pair<string,int> a = hashTable[index].at(i);
-		if (a.first == key) {
+		pair<string,int> *a = &hashTable[index].at(i);
+		if (a->first == key) {
 			newItem = false;
-			a.second++;
+			a->second++;
 			break;
 		}
 	}
@@ -28,23 +28,26 @@ void ChainingHashTable::insert(std::string key, int val) {
 		size++;
 		hashTable[index].push_back(pair<string, int>(key, val));
 	}
-	if (capacity / (1.0 * size) > .9) {
+	if (size / (1.0 * capacity) > .9) {
 		resize();
 	}
 }
 void ChainingHashTable::resize() {
+	capacity *= 2;
+	size = 0;
 	vector<pair<string, int>>* oldTable = hashTable;
-	hashTable = new vector<pair<string, int>>[capacity * 2];
-	for (int i = 0; i < capacity; i++) {
+	hashTable = new vector<pair<string, int>>[capacity];
+	for (int i = 0; i < (capacity/2); i++) {
 		vector<pair<string, int>> *curList = &oldTable[i];
 		if (curList->size() != 0) {
 			for (int j = 0; j < curList->size(); j++) {
-				insert(curList->at(j).first,curList->at(j).second);
+				string a = curList->at(j).first;
+				int b = curList->at(j).second;
+				insert(a, b);
 			}
 		}
 	}
 	delete[] oldTable;
-	capacity *= 2;
 }
 
 // removes the given key from the hash table - if the key is not in the list, throw an error
