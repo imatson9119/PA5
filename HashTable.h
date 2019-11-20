@@ -9,14 +9,17 @@
 
 using namespace std;
 // Chaining hash table class
+
+
 class HashTable{
 	protected:
 	// helper functions
 	int hash(std::string s); 
 	
 	// TODO: insert necessary variables for your hash table here
-	int n = 3000000;
+
 	int size = 0;
+	int capacity = 10000;
 
 
 	public: 

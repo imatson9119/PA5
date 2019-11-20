@@ -18,7 +18,7 @@ int HashTable::hash(std::string s) {
 	for (int i = 0; i < n; i++) {
 		hash = 7 * hash + s.at(i);
 	}
-	return hash;
+	return hash % capacity;
 }
 
 // returns a boolean of whether the hash table is empty or not
