@@ -11,7 +11,8 @@ class DoubleHashTable : public HashTable {
     int secondHash(std::string s);
 
     // TODO: insert additional variables here
-    
+	pair<string, int>* hashTable = new pair<string, int>[capacity];
+
     public: 
     DoubleHashTable();
     ~DoubleHashTable(); 
@@ -19,6 +20,8 @@ class DoubleHashTable : public HashTable {
     int remove(std::string key); 
     int get(std::string key); 
     void printAll(std::string filename);
+	void display(); //for debugging purposes
+	void resize();
 };
 
 #endif
