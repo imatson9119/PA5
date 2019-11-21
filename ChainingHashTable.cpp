@@ -1,5 +1,6 @@
 #include "ChainingHashTable.h"
 #include "Exceptions.h"
+#include <fstream>
 
 ///////////////////// TODO: FILL OUT THE FUNCTIONS /////////////////////
 
@@ -17,8 +18,9 @@ ChainingHashTable::~ChainingHashTable() {
 void ChainingHashTable::insert(std::string key, int val) {
 	int index = hash(key);
 	bool newItem = true;
-	for (int i = 0; i < hashTable[index].size(); i++) {
-		pair<string,int> *a = &hashTable[index].at(i);
+	vector<pair<string, int>> *curList = &hashTable[index];
+	for (int i = 0; i < curList->size(); i++) {
+		pair<string, int>* a = &curList->at(i);
 		if (a->first == key) {
 			newItem = false;
 			a->second++;
@@ -28,9 +30,9 @@ void ChainingHashTable::insert(std::string key, int val) {
 	if (newItem) {
 		size++;
 		hashTable[index].push_back(pair<string, int>(key, val));
-	}
-	if (size / (1.0 * capacity) > .9) {
-		resize();
+		if (size / (1.0 * capacity) > .9) {
+			resize();
+		}
 	}
 }
 void ChainingHashTable::resize() {
@@ -84,17 +86,25 @@ int ChainingHashTable::get(std::string key) {
 
 // prints number of occurrances for all given strings to a txt file
 void ChainingHashTable::printAll(std::string filename) {
-
+	ofstream file(filename);
+	for (int i = 0; i < capacity; i++) {
+		vector<pair<string, int>>* curList = &hashTable[i];
+		for (int j = 0; j < curList->size(); j++) {
+			file << curList->at(j).first << " " << curList->at(j).second << endl;
+		}
+	}
 }
 void ChainingHashTable::display() {
 	cout << endl << "{";
 	for (int i = 0; i < capacity; i++) {
 		vector<pair<string, int>>* curList = &hashTable[i];
-		cout << "[";
-		for (int j = 0; j < curList->size(); j++) {
-			cout << "(" << curList->at(j).first << ", " << curList->at(j).second << "), ";
+		if (curList->size() > 0) {
+			cout << "[";
+			for (int j = 0; j < curList->size(); j++) {
+				cout << "(" << curList->at(j).first << ", " << curList->at(j).second << "), ";
+			}
+			cout << "], ";
 		}
-		cout << "], ";
 	}
 	cout << "}" << endl;
 }

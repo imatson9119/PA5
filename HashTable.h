@@ -19,7 +19,7 @@ class HashTable{
 	// TODO: insert necessary variables for your hash table here
 
 	int size = 0;
-	int capacity = 10;
+	int capacity = 100000;
 
 
 	public: 
