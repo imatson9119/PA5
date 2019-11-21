@@ -7,7 +7,7 @@
 class ProbingHashTable : public HashTable {
     private:
     // TODO: insert additional variables here
-
+		pair<string, int> *hashTable = new pair<string,int>[capacity];
     public: 
     ProbingHashTable();
     ~ProbingHashTable(); 

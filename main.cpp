@@ -4,11 +4,9 @@
 using namespace std;
 int main(){
 	ChainingHashTable ht;
+	pair<string, int> *a = new pair<string,int>();
+	cout << ht.hashTable[0].at(0).first;
 	/*
-	for (int i = 0; i < 100; i++) {
-		ht.insert("hzxcvzxcvzcvzxcvzxcvzxcvzxzcxvzxcvzxcv",1);
-	}*/
-	
 	ifstream file("dictionary.txt");
 	while(!file.eof()){
 		string word;
@@ -17,4 +15,5 @@ int main(){
 			ht.insert(word, 1);
 	}
 	ht.printAll("outFile.txt");
+	*/
 }

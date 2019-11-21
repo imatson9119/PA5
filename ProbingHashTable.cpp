@@ -1,5 +1,6 @@
 #include "ProbingHashTable.h"
 
+using namespace std;
 // constructor (NOTE: graders will use a default constructor for testing)
 ProbingHashTable::ProbingHashTable() {
 	
@@ -7,12 +8,13 @@ ProbingHashTable::ProbingHashTable() {
 
 // destructor
 ProbingHashTable::~ProbingHashTable() {
-
+	delete[] hashTable;
 }
 
 // inserts the given string key
 void ProbingHashTable::insert(std::string key, int val) {
-
+	int index = hash(key);
+	
 }
 
 // removes the given key from the hash table - if the key is not in the list, throw an error

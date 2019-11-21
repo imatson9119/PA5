@@ -5,7 +5,6 @@
 
 // default constructor
 HashTable::HashTable() {
-
 }
 
 // destructor
@@ -17,7 +16,7 @@ int HashTable::hash(std::string s) {
 	int hash = 0;
 	int n = s.length();
 	for (int i = 0; i < n; i++) {
-		hash = 7 * hash + s.at(i);
+		hash = 47 * hash + s.at(i);
 	}
 	return abs(hash) % capacity;
 }
