@@ -1,4 +1,5 @@
 #include "ProbingHashTable.h"
+#include "Exceptions.h"
 
 using namespace std;
 // constructor (NOTE: graders will use a default constructor for testing)
@@ -46,8 +47,24 @@ void ProbingHashTable::resize() {
 }
 // removes the given key from the hash table - if the key is not in the list, throw an error
 int ProbingHashTable::remove(std::string key) {
-
-	return 0;
+	int index = hash(key);
+	bool removed = false;
+	int val = 0;
+	while (hashTable[index].second != 0) {
+		if (hashTable[index].first == key) {
+			removed = true;
+			val = hashTable[index].second;
+			hashTable[index].first = "";
+			hashTable[index].second = 0;
+			size--;
+			break;
+		}
+		index = (index + 1) % capacity;
+	}
+	if (!removed) {
+		throw ItemNotFoundException();
+	}
+	return val;
 }
 
 // getter to obtain the value associated with the given key
@@ -67,9 +84,9 @@ void ProbingHashTable::display() {
 		if (curPair->second != 0) {
 			cout << "(" << curPair->first << ", " << curPair->second << "), ";
 		}
-		else {
+		/*else {
 			cout << "(), ";
-		}
+		}*/
 	}
 	cout << "}" << endl;
 }

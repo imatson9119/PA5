@@ -56,9 +56,11 @@ void ChainingHashTable::resize() {
 // removes the given key from the hash table - if the key is not in the list, throw an error
 int ChainingHashTable::remove(std::string key) {
 	vector<pair<string, int>>* curList = &hashTable[hash(key)];
+	int val = 0;
 	bool removed = false;
 	for (int i = 0; i < curList->size(); i++) {
 		if (curList->at(i).first == key) {
+			val = curList->at(i).second;
 			curList->erase(curList->begin() + i);
 			if (curList->size() == 0) {
 				size--;
@@ -70,7 +72,7 @@ int ChainingHashTable::remove(std::string key) {
 	if (!removed) {
 		throw ItemNotFoundException();
 	}
-	return 0;
+	return val;
 }
 
 // getter to obtain the value associated with the given key
