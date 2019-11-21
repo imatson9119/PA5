@@ -34,7 +34,8 @@ void ProbingHashTable::insert(std::string key, int val) {
 	}
 }
 void ProbingHashTable::resize() {
-	capacity *= 2;
+	primesInd++;
+	capacity = primes[primesInd];
 	size = 0;
 	pair<string, int>* oldTable = hashTable;
 	hashTable = new pair<string, int>[capacity];

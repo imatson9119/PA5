@@ -139,6 +139,7 @@
   <ItemGroup>
     <Text Include="dictionary.txt" />
     <Text Include="outFile.txt" />
+    <Text Include="outFile1.txt" />
     <Text Include="output.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

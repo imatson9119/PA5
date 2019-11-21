@@ -12,7 +12,6 @@ class DoubleHashTable : public HashTable {
 
     // TODO: insert additional variables here
 	pair<string, int>* hashTable = new pair<string, int>[capacity];
-
     public: 
     DoubleHashTable();
     ~DoubleHashTable(); 

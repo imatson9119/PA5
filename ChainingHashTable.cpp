@@ -36,7 +36,8 @@ void ChainingHashTable::insert(std::string key, int val) {
 	}
 }
 void ChainingHashTable::resize() {
-	capacity *= 2;
+	primesInd++;
+	capacity = primes[primesInd];
 	size = 0;
 	vector<pair<string, int>>* oldTable = hashTable;
 	hashTable = new vector<pair<string, int>>[capacity];

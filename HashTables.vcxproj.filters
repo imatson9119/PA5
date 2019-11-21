@@ -52,5 +52,6 @@
     <Text Include="dictionary.txt" />
     <Text Include="output.txt" />
     <Text Include="outFile.txt" />
+    <Text Include="outFile1.txt" />
   </ItemGroup>
 </Project>

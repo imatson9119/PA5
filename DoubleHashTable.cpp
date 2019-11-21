@@ -1,4 +1,6 @@
 #include "DoubleHashTable.h"
+#include "Exceptions.h"
+#include <fstream>
 
 ///////////////////// TODO: FILL OUT THE FUNCTIONS /////////////////////
 
@@ -36,7 +38,8 @@ void DoubleHashTable::insert(std::string key, int val) {
 	}
 }
 void DoubleHashTable::resize() {
-	capacity *= 2;
+	primesInd++;
+	capacity = primes[primesInd];
 	size = 0;
 	pair<string, int>* oldTable = hashTable;
 	hashTable = new pair<string, int>[capacity];
@@ -50,19 +53,55 @@ void DoubleHashTable::resize() {
 }
 // removes the given key from the hash table - if the key is not in the list, throw an error
 int DoubleHashTable::remove(std::string key) {
-
-	return 0;
+	int index = hash(key);
+	int val = 0;
+	int newIndex = index;
+	bool removed = false;
+	int i = 1;
+	while (hashTable[newIndex].second != 0) {
+		if (hashTable[newIndex].first == key) {
+			val = hashTable[newIndex].second;
+			hashTable[newIndex].first = "";
+			hashTable[newIndex].second = 0;
+			removed = true;
+			size--;
+			break;
+		}
+		newIndex = (index + i * secondHash(key)) % capacity;
+		i++;
+	}
+	if (!removed) {
+		throw ItemNotFoundException();
+	}
+	return val;
 }
 
 // getter to obtain the value associated with the given key
 int DoubleHashTable::get(std::string key) {
-
-	return 0;
+	int index = hash(key);
+	int val = 0;
+	int newIndex = index;
+	int i = 1;
+	while (hashTable[newIndex].second != 0) {
+		if (hashTable[newIndex].first == key) {
+			val = hashTable[newIndex].second;
+			break;
+		}
+		newIndex = (index + i * secondHash(key)) % capacity;
+		i++;
+	}
+	return val;
 }
 
 // prints number of occurrances for all given strings to a txt file
 void DoubleHashTable::printAll(std::string filename) {
-
+	ofstream file(filename);
+	for (int i = 0; i < capacity; i++) {
+		pair<string, int>* curPair = &hashTable[i];
+		if (curPair->second != 0) {
+			file << curPair->first << " " << curPair->second << endl;
+		}
+	}
 }
 
 // helper functions 
@@ -72,8 +111,8 @@ int DoubleHashTable::secondHash(std::string s) {
 	for (int i = 0; i < n; i++) {
 		hash = 83 * hash + s.at(n-i-1);
 	}
-	return abs(hash) % capacity;
-	return 0;
+	hash = abs(hash) % capacity;
+	return primes[primesInd-1] - (hash % primes[primesInd-1]);
 }
 void DoubleHashTable::display() {
 	cout << endl << "{";
@@ -82,9 +121,9 @@ void DoubleHashTable::display() {
 		if (curPair->second != 0) {
 			cout << "(" << curPair->first << ", " << curPair->second << "), ";
 		}
-		else {
+		/*else {
 			cout << "(), ";
-		}
+		}*/
 	}
 	cout << "}" << endl;
 }
