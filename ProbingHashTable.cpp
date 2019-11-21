@@ -69,8 +69,16 @@ int ProbingHashTable::remove(std::string key) {
 
 // getter to obtain the value associated with the given key
 int ProbingHashTable::get(std::string key) {
-
-	return 0;
+	int index = hash(key);
+	int val = 0;
+	while (hashTable[index].second != 0) {
+		if (hashTable[index].first == key) {
+			val = hashTable[index].second;
+			break;
+		}
+		index = (index + 1) % capacity;
+	}
+	return val;
 }
 
 // prints number of occurrances for all given strings to a txt file

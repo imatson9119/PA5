@@ -18,7 +18,11 @@ int main(){
 	ht.insert("is.", 1);
 	ht.insert("Have", 1);
 	ht.insert("fun!", 1);
+	ht.insert("fun!", 1);
+	ht.insert("fun!", 1);
 	ht.display();
+	cout << ht.get("fun!");
+	cout << endl << ht.get("dl");
 	/*
 	ifstream file("dictionary.txt");
 	while(!file.eof()){

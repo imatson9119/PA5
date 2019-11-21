@@ -9,9 +9,8 @@
 // Chaining hash table class
 class ChainingHashTable: public HashTable {
     private:
-		//vector<pair<string, int>> *hashTable = new vector<pair<string, int>>[capacity];
-    public: 
 		vector<pair<string, int>>* hashTable = new vector<pair<string, int>>[capacity];
+    public: 
     ChainingHashTable();
     ~ChainingHashTable(); 
     void insert(std::string key, int val); 
