@@ -15,6 +15,8 @@ class ProbingHashTable : public HashTable {
     int remove(std::string key); 
     int get(std::string key); 
     void printAll(std::string filename);
+	void resize();
+	void display(); //for debugging purposes
 };
 
 #endif
