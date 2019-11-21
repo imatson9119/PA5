@@ -28,10 +28,13 @@ void ProbingHashTable::insert(std::string key, int val) {
 	if (newItem) {
 		hashTable[index] = pair<string, int>(key, val);
 		size++;
-		if (size / (1.0 * capacity) > .5) {
+		if (size / (1.0 * capacity) > loadFactor) {
 			resize();
 		}
 	}
+}
+void ProbingHashTable::setLoadFactor(double a){
+	this->loadFactor = a;
 }
 void ProbingHashTable::resize() {
 	primesInd++;
