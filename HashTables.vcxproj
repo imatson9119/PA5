@@ -135,6 +135,7 @@
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="HashTable.h" />
     <ClInclude Include="ProbingHashTable.h" />
+    <ClInclude Include="StopWatch.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="dictionary.txt" />
