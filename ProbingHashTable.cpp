@@ -1,5 +1,6 @@
 #include "ProbingHashTable.h"
 #include "Exceptions.h"
+#include <fstream>
 
 using namespace std;
 // constructor (NOTE: graders will use a default constructor for testing)
@@ -83,7 +84,13 @@ int ProbingHashTable::get(std::string key) {
 
 // prints number of occurrances for all given strings to a txt file
 void ProbingHashTable::printAll(std::string filename) {
-
+	ofstream file(filename);
+	for (int i = 0; i < capacity; i++) {
+		pair<string, int>* curPair = &hashTable[i];
+		if(curPair->second != 0){
+			file << curPair->first << " " << curPair->second << endl;
+		}
+	}
 }
 void ProbingHashTable::display() {
 	cout << endl << "{";
