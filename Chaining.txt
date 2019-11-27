@@ -724,7 +724,7 @@ settlers 16
 vise 11
 scrotum 39
 residents 19
-clashes 5
+clashes 4
 instated 13
 solicitude 14
 scone 15
@@ -755,8 +755,8 @@ squashier 10
 unfathomable 11
 probed 7
 consensus 9
-nutshell 10
 consummately 12
+nutshell 9
 offertory 9
 unwed 20
 feeler 50
@@ -4745,7 +4745,7 @@ crepuscular 13
 lumen 12
 autobiographical 15
 whitewashing 42
-phonon 9
+phonon 8
 undistributed 15
 dispensaries 11
 reams 17
@@ -5302,7 +5302,7 @@ platypus 13
 efficacy 16
 afforestation 26
 disjunctive 26
-renovate 4114
+renovate 4108
 sifted 12
 armies 15
 entering 20
@@ -5483,7 +5483,7 @@ denounced 13
 dampness 16
 terrapins 6
 kismet 12
-homogeneous 54
+homogeneous 53
 wad 7
 spines 8
 manicured 13
@@ -8522,7 +8522,7 @@ deposits 18
 character 19
 perfume 14
 wheat 25
-shrill 8
+shrill 7
 marquis 22
 responsive 21
 hither 22
@@ -12334,7 +12334,7 @@ behoved 27
 wrapped 10
 whalers 17
 boarded 6
-intrusions 9
+intrusions 8
 teammates 9
 frictions 19
 condors 11
@@ -15706,7 +15706,7 @@ leafy 10
 atonality 5
 kneecaps 17
 engulfed 5
-tailormade 8
+tailormade 7
 untended 8
 syndication 14
 saddled 14
@@ -23414,7 +23414,7 @@ serving 21
 bowling 18
 ventricles 4
 scruple 8
-humaner 46
+humaner 45
 crumbled 16
 fixing 11
 rejoices 141
@@ -23596,7 +23596,7 @@ baleen 30
 interpolatable 10
 evolutions 9
 lending 13
-judgements 12
+judgements 11
 aptly 10
 uninterrupted 7
 denigrates 10
@@ -29349,7 +29349,7 @@ eccentrically 14
 accomplice 44
 adze 16
 categorically 5
-vignette 194
+vignette 192
 funnel 8
 applauded 13
 eye 14
@@ -30288,8 +30288,8 @@ slowish 11
 after 32
 unsurvivable 8
 attempting 16
-unshockable 25
 caboose 5
+unshockable 25
 falsity 20
 seized 7
 presently 9
@@ -31857,7 +31857,7 @@ newfangled 6
 attributive 12
 headmistress 16
 kite 10
-shrugs 13
+shrugs 12
 midweek 10
 insulant 21
 emptied 13
@@ -33225,7 +33225,7 @@ acidophiles 10
 alaska 26
 dipsomaniacs 27
 pouncing 14
-processor 662
+processor 660
 emigre 15
 cavalrymen 27
 ions 18
@@ -34627,7 +34627,7 @@ colouration 15
 proboscis 61
 hic 15
 hid 7
-computable 11
+computable 10
 multinationals 12
 arachnids 18
 dreams 23
@@ -38492,7 +38492,7 @@ sport 24
 gourd 20
 mimes 14
 sixtieth 10
-compiler 56
+compiler 55
 insurrection 15
 thesis 8
 compiles 16
@@ -38795,8 +38795,8 @@ crossexamined 9
 calculus 6
 airy 25
 tectonics 7
-boardroom 6
 predispose 7
+boardroom 5
 undefinable 11
 entailing 26
 vested 21
@@ -39815,7 +39815,7 @@ seeking 16
 three 13
 expectancy 5
 tumult 16
-animism 36
+animism 35
 albeit 10
 absorptivity 18
 madcap 13
@@ -40812,7 +40812,7 @@ seances 8
 legendary 11
 chisels 13
 bandaging 9
-custody 12
+custody 11
 hotdogs 14
 bountiful 8
 taiwan 11
@@ -44449,7 +44449,7 @@ discriminator 8
 lavished 7
 envisaging 213
 inspects 14
-windbreak 56
+windbreak 55
 campaigners 13
 dethrone 15
 airship 8
@@ -47156,7 +47156,7 @@ wriggled 21
 deathly 12
 epidemiology 11
 tubing 11
-peaky 23
+peaky 22
 mappable 15
 republished 23
 secularists 18
@@ -48269,7 +48269,7 @@ gilts 16
 chortling 13
 imparts 15
 denounce 10
-emblems 125
+emblems 124
 confessing 11
 pirated 13
 lyrist 11
@@ -48344,7 +48344,7 @@ daringly 16
 comparator 20
 anglepoise 13
 feelingly 12
-inviolate 12
+inviolate 11
 subtitle 14
 undroppable 9
 january 5

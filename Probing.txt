@@ -999,11 +999,11 @@ finals 5
 legalise 15
 isolated 7
 unsealable 13
-nutshell 10
-hills 20
 syllabary 20
+hills 20
 legalism 13
 ankara 10
+bullet 12
 scot 8
 erases 11
 sizzling 12
@@ -1011,10 +1011,10 @@ hilly 21
 upgrade 27
 slugs 9
 isolates 14
-bullet 12
 potshot 10
-marooning 17
 equities 11
+marooning 17
+nutshell 9
 eraser 7
 sixties 5
 finale 8
@@ -10279,7 +10279,7 @@ microcosm 15
 starlings 9
 peaks 17
 awakens 27
-peaky 23
+peaky 22
 jute 13
 purveyance 12
 unresolvable 8
@@ -22713,7 +22713,7 @@ chameleon 12
 lexically 7
 barged 13
 mealies 8
-renovate 4114
+renovate 4112
 leased 11
 differentials 11
 barges 7
@@ -26498,7 +26498,7 @@ guessing 34
 vexes 13
 reviling 15
 gamy 9
-processor 662
+processor 661
 elisions 23
 moms 12
 dioxin 2
@@ -30338,7 +30338,7 @@ goldsmith 10
 nosier 12
 excusing 69
 rewritings 8
-humaner 46
+humaner 45
 refuel 20
 ejection 25
 draconian 23
@@ -31338,7 +31338,7 @@ redundancies 13
 oscilloscopes 11
 ironage 13
 permits 8
-vignette 194
+vignette 193
 thirdly 15
 caudal 16
 unavailability 68
@@ -33077,8 +33077,8 @@ tablet 10
 livelihoods 14
 intricacies 12
 circulars 32
-animism 36
 bugle 11
+animism 35
 navigable 4
 combed 6
 animist 14
@@ -33525,7 +33525,7 @@ overbearing 13
 barred 12
 metaphysically 29
 pollutants 5
-custody 12
+custody 11
 horrifyingly 15
 postmen 52
 barren 37
@@ -45473,7 +45473,7 @@ heterosexuals 16
 sterilising 20
 berating 21
 remarriage 12
-compiler 56
+compiler 55
 compiles 16
 discipline 16
 circumventable 9
@@ -47292,7 +47292,7 @@ heckler 9
 slice 31
 heckles 36
 slick 238
-shrugs 13
+shrugs 12
 dispossession 11
 nurseries 25
 heckled 13
@@ -54751,7 +54751,7 @@ taxpaying 13
 roomier 14
 infrequency 9
 socket 12
-computable 11
+computable 10
 spotty 19
 victoria 16
 puts 51

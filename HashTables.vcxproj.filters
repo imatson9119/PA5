@@ -54,7 +54,8 @@
   <ItemGroup>
     <Text Include="dictionary.txt" />
     <Text Include="output.txt" />
-    <Text Include="outFile.txt" />
-    <Text Include="outFile1.txt" />
+    <Text Include="Chaining.txt" />
+    <Text Include="DoubleHashing.txt" />
+    <Text Include="Probing.txt" />
   </ItemGroup>
 </Project>

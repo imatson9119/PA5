@@ -9,6 +9,7 @@ int main(){
 	////////////////////////////////////////////////////////////
 	//Default code
 	////////////////////////////////////////////////////////////
+	
 	cout << "Please enter the name of the input file (including extension): ";
 	string fileName;
 	cin >> fileName;
@@ -38,7 +39,7 @@ int main(){
 	const int numTrials = 100;
 	double data[numPoints] = { 0 };
 	for (int trial = 1; trial <= numTrials; trial++) {
-		ProbingHashTable ht;
+		ChainingHashTable ht;
 		cout << "Starting trial " << trial << endl;
 		for (int i = 0; i < numPoints; i++) {
 			StopWatch t;

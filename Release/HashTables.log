@@ -1,17 +1,7 @@
-﻿  ChainingHashTable.cpp
-C:\Users\imats\source\repos\CS222\HashTables\ChainingHashTable.cpp(22,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\imats\source\repos\CS222\HashTables\ChainingHashTable.cpp(47,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\imats\source\repos\CS222\HashTables\ChainingHashTable.cpp(62,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\imats\source\repos\CS222\HashTables\ChainingHashTable.cpp(82,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\imats\source\repos\CS222\HashTables\ChainingHashTable.cpp(95,21): warning C4018: '<': signed/unsigned mismatch
-  DoubleHashTable.cpp
-  HashTable.cpp
-  ProbingHashTable.cpp
-  main.cpp
-C:\Users\imats\source\repos\CS222\HashTables\ChainingHashTable.cpp(106,22): warning C4018: '<': signed/unsigned mismatch
+﻿  main.cpp
   Generating code
-  1 of 299 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+  83 of 299 functions (27.8%) were compiled, the rest were copied from previous compilation.
+    4 functions were new in current compilation
+    46 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   HashTables.vcxproj -> C:\Users\imats\source\repos\CS222\Release\HashTables.exe
